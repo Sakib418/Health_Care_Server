@@ -1,5 +1,7 @@
-import express,{Request,Response} from 'express';
+import express,{NextFunction, Request,Response} from 'express';
 import { UserController } from './user.controller';
+import { fileUploader } from '../../../helper/fileUploader';
+import { UserValidation } from './user.validation';
 
 
 
@@ -7,11 +9,12 @@ import { UserController } from './user.controller';
 const router = express.Router();
 
 router.post("/create-patient",
-       UserController.createPatient
+       fileUploader.upload.single('file'),
+       (req: Request, res: Response,next: NextFunction) => {
+             req.body = UserValidation.createPatientValidationSchema.parse(JSON.parse(req.body.data))
+             return UserController.createPatient(req,res,next)
+       }
+       
 
-//     (req: Request,res: Response) => {
-        
-//     }
-// 
 )
 export const userRoutes = router;
