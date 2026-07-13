@@ -77,6 +77,7 @@ const schedulesForDoctor = async(
     fillters: any,
     options: IOptions
 ) => {
+    
     const { page, limit, skip, sortBy, sortOrder } = paginationHelper.calculatePagination(options);
     const {startDateTime: filterStartDateTime, endDateTime: filterEndDateTime} = fillters;
     const andConditions: Prisma.ScheduleWhereInput[] = [];
