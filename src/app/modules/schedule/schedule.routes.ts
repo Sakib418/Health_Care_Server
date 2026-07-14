@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.get(
     "/",
-    auth(UserRole.DOCTOR, UserRole.DOCTOR,UserRole.ADMIN,UserRole.PATIENT),
+    auth(UserRole.DOCTOR, UserRole.DOCTOR,UserRole.ADMIN),
     ScheduleController.schedulesForDoctor
 )
 

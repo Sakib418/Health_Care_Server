@@ -14,6 +14,7 @@ const insertIntoDB = async (user: IJWTPayload, payload: {
     const doctorScheduleData = payload.scheduleIds.map(scheduleId => ({
         doctorId: doctorData.id,
         scheduleId
+        
     }))
 
     return await prisma.doctorSchedules.createMany({

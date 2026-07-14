@@ -8,7 +8,7 @@ const router = express.Router();
 
 router.post(
     "/",
-    auth(UserRole.DOCTOR,UserRole.PATIENT),
+    auth(UserRole.DOCTOR),
     DoctorScheduleController.insertIntoDB
 )
 
