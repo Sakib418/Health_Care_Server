@@ -5,7 +5,7 @@ model Schedule {
     createAt      DateTime @default(now())
     updateAt      DateTime @updatedAt
     doctoreSchedules DoctorSchedules []
-
+    appointment Appointment[]
     @@map("schedules")
 }
 
@@ -18,7 +18,8 @@ model DoctorSchedules {
     isBooked   Boolean @default(false)
     createAt   DateTime @default(now())
     updateAt   DateTime @updatedAt
-
+    
     @@id([doctorId,scheduleId])
+    
     @@map("doctor_schedules")
 }
