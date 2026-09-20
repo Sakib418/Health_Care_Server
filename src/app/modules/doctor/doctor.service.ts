@@ -136,7 +136,12 @@ const getAllFromDB = async (filters: any, options: IOptions) => {
                 include: {
                     specialities: true
                 }
-            }
+            },
+             doctoreShedules: {
+        include: {
+          schedule: true
+        }
+      },
         }
     });
 
@@ -388,11 +393,11 @@ const getByIdFromDB = async (id: string): Promise<Doctor | null> => {
                     specialities: true,
                 },
             },
-            doctoreShedules: {
-                include: {
-                    schedule: true
-                }
-            }
+            doctorSchedules: {
+        include: {
+          schedule: true
+        }
+      },
         },
     });
     return result;

@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@prisma/adapter-pg':
-        specifier: ^7.0.1
+        specifier: ^7.8.0
         version: 7.8.0
       axios:
         specifier: ^1.11.0
@@ -57,8 +57,11 @@ importers:
         specifier: ^7.7.0
         version: 7.7.0(zod@4.4.3)
       pg:
-        specifier: ^8.16.3
+        specifier: ^8.22.0
         version: 8.22.0
+      strip:
+        specifier: ^3.0.0
+        version: 3.0.0
       stripe:
         specifier: ^19.1.0
         version: 19.3.1(@types/node@24.13.2)
@@ -1242,6 +1245,9 @@ packages:
   strip-json-comments@2.0.1:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
+
+  strip@3.0.0:
+    resolution: {integrity: sha512-kIPiqRSsGCwWItPLDhuZPQlwX16WjQggT5QS1f5Aam0DSbtPQh8SsIkbBxLm+835qb1Q0OoQnvrhJ0oplIup8Q==}
 
   stripe@19.3.1:
     resolution: {integrity: sha512-5NXhLxTZ+4uO1wnsmNysILVuyeZ1Xia7niz/8ykBkGJkCcrY2WyQZwcfYuWZmZEJtWr2+0j49JXwNC6y9CHL7Q==}
@@ -2487,6 +2493,8 @@ snapshots:
   strip-bom@3.0.0: {}
 
   strip-json-comments@2.0.1: {}
+
+  strip@3.0.0: {}
 
   stripe@19.3.1(@types/node@24.13.2):
     dependencies:
