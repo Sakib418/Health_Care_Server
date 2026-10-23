@@ -11,6 +11,11 @@ router.get(
     auth(UserRole.PATIENT, UserRole.DOCTOR),
     AppointmentController.getMyAppointment
 )
+router.get(
+    '/',
+    auth(UserRole.ADMIN),
+    AppointmentController.getAllFromDB
+);
 router.post(
     "/",
     
